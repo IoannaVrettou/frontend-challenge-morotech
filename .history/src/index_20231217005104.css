@@ -1,0 +1,250 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Figtree", sans-serif;
+}
+:root {
+  --primary-color-light: #faeff0;
+  --primary-color-dark: black;
+  --secondary-color-light: #e4ecf2;
+  --secondary-color-dark: rgb(120, 110, 110);
+  --red: #b70000;
+}
+body {
+  background-color: var(--secondary-color-light);
+  background: url(../public/flat-lay-books-with-copy-space.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0 0 30px;
+  h1 {
+    display: inline-block;
+    background-image: url(../public/logo-books.png);
+    filter: brightness(1500%);
+    width: 315px;
+    height: 100px;
+    overflow: hidden;
+    text-indent: -9999px;
+    margin: 20px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 20px 50px 0 0;
+}
+
+.quote h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Kalnia", sans-serif;
+  margin: 50px 250px 0 0;
+}
+
+.search-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+
+.search {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.search input {
+  background-color: var(--secondary-color-light);
+  outline: 0;
+  width: 270px;
+  height: 50px;
+  padding: 0 0.5rem;
+  font-size: 15px;
+  font-weight: bold;
+}
+.search input:focus {
+  border: 3px solid #008ecc;
+}
+
+.search-icon {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+.booklist-container {
+  width: 60%;
+  margin: 20px auto;
+  padding: 0 0 50px 0;
+  padding: 15px;
+  border-radius: 6px;
+  background: #faeff0;
+  box-shadow: 0px 0px 20px #aaa, -0px -0px 20px #fff;
+  font-family: "Figtree", sans-serif;
+}
+
+.book {
+  width: 100%;
+  /* height: 150px; */
+  display: block;
+  overflow: hidden;
+  margin: 10px;
+  color: var(--primary-color-dark);
+  border-bottom: #333 2px solid;
+}
+
+.book h1 {
+  white-space: wrap;
+  text-decoration: none !important;
+  font-size: 18px;
+  width: 95%;
+  overflow: hidden;
+  margin: 10px;
+  text-overflow: ellipsis;
+}
+
+.book h2 {
+  white-space: wrap;
+  font-size: 16px;
+  margin: 10px;
+  color: var(--secondary-color-dark);
+  text-overflow: ellipsis;
+}
+
+.pagination-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #faeff0;
+  box-shadow: 0px 0px 20px #aaa, -0px -0px 20px #fff;
+  color: var(--primary-color-dark);
+  font-family: "Figtree", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.button:disabled {
+  pointer-events: none !important;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.back-button {
+  width: 7rem;
+}
+
+@media (max-width: 1000px) {
+  .icon-arrow {
+    margin: 0px 10px;
+  }
+}
+
+.icon-arrow {
+  margin: 0px 10px;
+}
+
+.icon-angle {
+  margin-right: 20px;
+}
+
+.details-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.details-card {
+  padding: 10px;
+  border-radius: 6px;
+  color: var(--primary-color-dark);
+  background: #faeff0;
+  a {
+    cursor: default;
+  }
+}
+.book-details-header {
+  color: var(--primary-color-dark);
+}
+
+.details-container h1 {
+  font-family: "Figtree", sans-serif;
+  white-space: wrap;
+  text-decoration: none !important;
+  font-size: 20px;
+  overflow: hidden;
+  margin: 10px;
+  text-overflow: ellipsis;
+}
+
+.details-container h2 {
+  font-family: "Figtree", sans-serif;
+  text-decoration: none !important;
+  white-space: wrap;
+  font-size: 16px;
+  color: var(--secondary-color-dark);
+  margin: 10px;
+  text-overflow: ellipsis;
+}
+
+.details-container h3 {
+  font-family: "Kalnia", sans-serif;
+  text-decoration: none !important;
+  white-space: wrap;
+  font-size: 26px;
+  margin: 5px 10px;
+  text-overflow: ellipsis;
+}
+
+.loading-pane {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  animation: spin 1.5s linear infinite;
+}
+
+.error {
+  width: 40%;
+  margin: 20px 30px 50px 700px;
+  padding: 30px 0px;
+  text-align: center;
+  font-family: "Figtree", sans-serif;
+  border-radius: 6px;
+  font-size: 18px;
+  color: var(--primary-color-dark);
+  background: var(--red);
+  opacity: 0.8;
+}
